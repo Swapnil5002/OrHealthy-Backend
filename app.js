@@ -4,14 +4,15 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 const userRouter = require('./routes/userRoutes')
 
-// mongoose.connect(
-//     'mongodb+srv://devuser:abcd1234@cluster0-2hycj.mongodb.net/LMS?retryWrites=true&w=majority',
-//     {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true
-//     },
-//     () => console.log('DB Connected!')
-// )
+mongoose.connect(
+    'mongodb+srv://devuser:abcd1234@cluster0-2hycj.mongodb.net/LMS?retryWrites=true&w=majority',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    },
+    () => console.log('DB Connected!')
+)
+
 const app = express()
 
 const sess = {
